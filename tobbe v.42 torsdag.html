@@ -106,15 +106,20 @@ function update() {
 //   }
 
 
-  for (var i = 0; i < a; i++) {
-    var vagX = 100 + i * 90;
-    drawZombie(vagX, 550, i % 2 == 0);
-    console.log(i % 2)
-    if (distance(player.x, player.y, vagX, 550) < 65) {
-        text(280, 250, 50, "GAME OVER", "red");
-        stopUpdate()
+//   for (var i = 0; i < a; i++) {
+//     var vagX = 100 + i * 90;
+//     drawZombie(vagX, 550, i % 2 == 0);
+//     console.log(i % 2)
+//     if (distance(player.x, player.y, vagX, 550) < 65) {
+//         text(280, 250, 50, "GAME OVER", "red");
+//         stopUpdate()
+//     }
+//   }
+ for (var f = 1; f < 10; f++) {
+    if(f % 2 == 1) {
+        console.log(f)
     }
-  }
+ }
 }
   </script>
 </body>
