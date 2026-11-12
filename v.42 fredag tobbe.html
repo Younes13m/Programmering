@@ -39,7 +39,11 @@ function drawZombie(x, y) {
 }
 
 function update() {
-  clearScreen();
+ clearScreen();
+ fill("black")
+//  jag ändrade bakgrunden från vit till svart
+//  genom att kolla konstrasterna och det visade
+//  att svart var bättre än vit 
   text(20, 30, 24, "Zombiespelet", "black");
   if(keyboard.space) {
     enemies.push( {x: random(100, 700), y: 550})
@@ -63,6 +67,9 @@ function update() {
   if (keyboard.down) {
     player.y = player.y + player.speed;
   }
+  // Den här spelet har en rörelse med hjälp 
+  // av tangentera för att man ska kunna ha 
+  // ett sätt att röra på spelaren
 
   if (zombie1.x < player.x) {
     zombie1.x = zombie1.x + zombie1.speed;
@@ -82,8 +89,11 @@ function update() {
     stopUpdate();
   } else {
     poang = poang + 1;
-    text(20, 70, 24, "Poäng: " + poang, "black");
+    text(20, 70, 24, "Poäng: " + poang, "white");
   }
+  // Poäng färgen ändrade jag från svart till vit.
+  // Genom att kolla kontrasten på färgerna 
+  // och jag ändrade för att annars syns inte texten.
 
   if (zombie2.x < player.x) {
     zombie2.x = zombie2.x + zombie2.speed;
@@ -113,6 +123,9 @@ function update() {
         stopUpdate();
     }
   }
+  // Detta spelet är riktat mot barn och tonåringar 
+  // för att spelet ska vara roligt men samtidigt 
+  // utmanande vilket gör spelet roligare 
 
 }
   </script>
