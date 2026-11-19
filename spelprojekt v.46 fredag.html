@@ -1,4 +1,4 @@
-// ===== MIN PROJEKTPLAN =====
+<!-- // ===== MIN PROJEKTPLAN =====
 // Spelidé: (skriv en kort beskrivning, 2-4 meningar)
 Spelet kommer att vara inspirerat av det klassiska spelet Snake. Spelaren styr en orm som ska jaga och samla in olika föremål. När ormen når ett föremål växer den med en enhet och spelarens poäng ökar.
 Under spelets gång kommer det även att dyka upp ett särskilt föremål som är tänkt att lura spelaren. Om ormen kommer i kontakt med detta föremål förlorar spelaren spelet.
@@ -38,4 +38,49 @@ SPELARE rör sig åt högerpil
 OM spelare når högerkanten så
 Spelet avslutas
 OM spelare träffar äpplet så
-Längden +1
+Längden +1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Intro</title>
+</head>
+<body>
+  <script src="http://koda.nu/simple.js">
+    
+   
+
+   
+    function update() {
+    fill("black")
+    
+  rectangle(400, 200, 850, 600, "green")
+
+  line(500, 800, 500, 200, 5, "white")
+  line(600, 800, 600, 200, 5, "white")
+
+  
+//   for(i = 0; i < 300; i++) {
+//     line (500 + (i * 500), 800, 500, 200, 5, "white")
+//   }
+
+
+for(var i = 0; i < 10; i++) {
+    line(400 + (i * 50), 100, 5, "red")
+}
+
+   }
+   
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
