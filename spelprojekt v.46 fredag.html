@@ -50,13 +50,23 @@ Längden +1 -->
 <body>
   <script src="http://koda.nu/simple.js">
     
-   
+   var snakeX = 430
+   var snakeY = 230
+   var snakeStorlek = 40
+   var snakeLangd = 40
+
+   var column = 8;
+   var rows = 6
+   var rutstorlek = 100;
+
+   var startX = 400;
+   var startY = 200;
 
    
     function update() {
     fill("black")
     
-  rectangle(400, 200, 850, 600, "green")
+  rectangle(400, 200, 800, 600, "green")
 
   line(500, 800, 500, 200, 5, "white")
   line(600, 800, 600, 200, 5, "white")
@@ -66,12 +76,39 @@ Längden +1 -->
 //     line (500 + (i * 500), 800, 500, 200, 5, "white")
 //   }
 
-
-for(var i = 0; i < 10; i++) {
-    line(400 + (i * 50), 100, 5, "red")
+// Dessa två for-loopara för att göra spelplanens rutnät
+for (var i = 0; i < 8; i++) {
+    line(500 + (i * 100), 800, 500 + (i * 100), 200, 5, "darkgreen");
 }
 
-   }
+for (var i = 0; i < 10; i++) {
+    line(400, 300 + (i * 100), 1200, 300 + (i * 100), 5, "darkgreen");
+    
+}
+
+for (var row = 0; row < 6; row++) {
+    for (var column = 0; column < 8; column++) {
+
+        var squareNumber = row * 8 + column + 1;
+
+        var squareX = startX + column * 100;
+        var squareY = startY + row * 100;
+         }
+
+      
+   
+
+   
+
+   rectangle(snakeX, snakeY, snakeStorlek, snakeLangd, "white")
+
+  
+
+  //  var snakeX = random(430, 1130);
+  //  var snakeY = random(230, 730);
+   
+   
+}
    
 
 
